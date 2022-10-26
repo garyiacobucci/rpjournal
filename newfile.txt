@@ -1,0 +1,2 @@
+Initialized from this guide:
+https://reachmnadeem.wordpress.com/2019/12/07/getting-started-with-nodejs-app-using-visual-studio-code/
