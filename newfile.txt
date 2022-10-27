@@ -1,2 +1,6 @@
 Initialized from this guide:
 https://reachmnadeem.wordpress.com/2019/12/07/getting-started-with-nodejs-app-using-visual-studio-code/
+
+10/27 - Let's get the database connected to Express.
+
+10/28 - Let's build out the rest of the controllers (hard-coded actions OK for now).
