@@ -1,8 +1,14 @@
-import logMessage from './js/logger'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Message from './js/Message'
+
 import './css/style.css'
-// Log message to console
-logMessage('A very warm welcome to Expack!')
-// Needed for Hot Module Replacement
-if(typeof(module.hot) !== 'undefined') {
+
+ReactDOM.render(
+  <Message />,
+  document.getElementById('react-container') // eslint-disable-line no-undef
+)
+
+if(module.hot) // eslint-disable-line no-undef  
   module.hot.accept() // eslint-disable-line no-undef  
-}
+

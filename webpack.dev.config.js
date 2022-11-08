@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
+
 module.exports = {
   entry: {
     main: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', './src/index.js']
@@ -12,7 +13,7 @@ module.exports = {
   },
   mode: 'development',
   target: 'web',
-  devtool: 'source-map',
+  devtool: '#source-map',
   module: {
     rules: [
       {
