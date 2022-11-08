@@ -2,15 +2,10 @@
   "name": "rpjournal",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/server.js",
+  "main": "myPrivateURI.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rimraf ./dist/",
-    "build": "babel ./src/  --presets=babel-preset-env --out-dir dist  --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
-    "server:dev": "nodemon ./src/server.js --exec babel-node --presets babel-preset-env",
-    "server:prod": "node ./dist/server.js",
-    "prod": "npm run clean && npm run build && npm run server:prod",
-    "dev": "npm run server:dev"
+    "build": "rm -rf dist && webpack --mode development",
+    "start": "node ./dist/server.js"
   },
   "repository": {
     "type": "git",
@@ -23,18 +18,17 @@
     "url": "https://github.com/garyiacobucci/rpjournal/issues"
   },
   "homepage": "https://github.com/garyiacobucci/rpjournal#readme",
-  "devDependencies": {
-    "@babel/core": "^7.19.6",
-    "@babel/preset-env": "^7.19.4",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-watch": "^7.7.0",
-    "nodemon": "^2.0.20",
-    "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.2"
-  },
   "dependencies": {
-    "express": "^4.18.2",
-    "pg": "^8.8.0"
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-node-externals": "^3.0.0"
   }
 }
